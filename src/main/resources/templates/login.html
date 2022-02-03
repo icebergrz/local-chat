@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      lang="en">
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" th:href="@{css/auth.css}">
+</head>
+<body>
+
+<main>
+    <div class="container">
+        <div class="auth-img">
+        </div>
+        <div class="auth-form">
+            <div class="wrapper">
+                <div class="header">
+                    <h3 class="sign-in">Sign in</h3>
+                    <div class="button">
+                        <a th:href="@{/registration}">Register</a>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <form th:action="@{/login}" method="post">
+                    <div>
+                        <label class="user">
+                            <input class="user-input" type="text" name="username" placeholder="My username is"  />
+                        </label>
+                    </div>
+                    <div>
+                        <label class="lock">
+                            <input type="password" name="password" placeholder="Password" />
+                        </label>
+                    </div>
+                    <div>
+                        <input type="submit" value="Sign in" />
+                    </div>
+                    <div class="forgot-label">Lost your password?</div>
+
+                    <div class="auth-message-error bad" th:if="${param.error}">
+                        Неверный логин или пароль.
+                    </div>
+                    <div class="auth-message-error good" th:if="${param.logout}">
+                        Вы успешно вышли из аккаунта.
+                    </div>
+
+                    <div class="clear"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+
+</body>
+</html>

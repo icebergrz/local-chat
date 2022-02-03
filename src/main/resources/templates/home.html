@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      lang="en">
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" th:href="@{css/auth.css}">
+</head>
+<body>
+
+<main>
+        <div class="container flex">
+            <div class="box flex">
+                <div class="welcome-form flex">
+                    <div class="welcome-form-text flex">
+                        <h1>Welcome!</h1>
+                    </div>
+                    <div class="welcome-form-string flex">
+                        <a th:href="@{/login}" class="btn">Войти</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+</main>
+
+</body>
+</html>
