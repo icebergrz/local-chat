@@ -1,5 +1,6 @@
 package com.project.localchat.entity;
 
+import com.sun.istack.NotNull;
 import lombok.Data;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
@@ -15,7 +16,9 @@ public class Users{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotNull
     private String username;
+    @NotNull
     private String password;
     private boolean active;
     private String firstName;

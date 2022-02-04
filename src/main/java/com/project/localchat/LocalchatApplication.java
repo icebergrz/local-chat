@@ -1,10 +1,8 @@
 package com.project.localchat;
 
-import com.project.localchat.entity.Users;
-import com.project.localchat.repository.UserRepository;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration;
 
 @SpringBootApplication
 public class LocalchatApplication {
